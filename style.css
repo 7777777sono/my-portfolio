@@ -9,10 +9,8 @@ ul{
 
 li{
     list-style: none; /* リストの[・]を消す */
-    margin-left: 40px;
+    margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
 }
-
-
 
 .header{
     height:50px;
@@ -35,6 +33,15 @@ li{
 
 .name{
     padding-top: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: aliceblue;
+    /* フェードイン */
+    animation-name: fadein;  /* fadeinとアニメーション名を定義 */
+    animation-duration: 2s;  /* アニメーションの長さを指定する */
+}
+
+.roman-name{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -134,4 +141,27 @@ a{
     margin-bottom: 50px;
     height: 300px;
     width: 400px;
+}
+
+.divination{
+    text-align: center;  /* 中央寄せの指定 */
+}
+
+.divination-title{
+    color:cyan;
+}
+
+.btn-list{
+    text-align: center;
+}
+
+#fate-img{
+    height: 300px;
+    width: 400px;
+}
+
+.btn{
+    margin: 3px;
+    padding: 3px 7px;
+    border: 1px solid black;
 }
