@@ -1,26 +1,63 @@
-body{
-    background-color: aqua;
+.non-footer{
+    background-image: url("./image/evening-g600d7b0b6_1920.jpg");
+    background-size: 100%;
 }
+
+ul{
+    display: flex; /* 中の要素を横並びにする */
+}
+
+li{
+    list-style: none; /* リストの[・]を消す */
+    margin-left: 40px;
+}
+
+
 
 .header{
     height:50px;
     background-color: black;
-    padding: 100px;
-    color: cornflowerblue;
-    opacity: 0.8;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    padding-left: 30px;
+    color: rgb(10, 240, 221);
+    opacity: 0.8;  
     padding-top: 10px;
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    width: 100%;
+    display: flex; /* 中の要素を横並びにする */
 }
 
 .main{
-    padding: 50px;
+    padding-left: 30px;
+    padding-bottom: 50px;
 }
 
 .name{
-    padding: 20px;
+    padding-top: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: aliceblue;
+    /* フェードイン */
+    animation-name: fadein;  /* fadeinとアニメーション名を定義 */
+    animation-duration: 2s;  /* アニメーションの長さを指定する */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .introduction{
-    border-bottom: 1.5px solid black;
+    color: aliceblue;
+    border-bottom: 1.5px solid aliceblue;
     margin-bottom: 30px;
 }
 
@@ -33,31 +70,68 @@ body{
     float: left;
 }
 
+a{
+    color: aliceblue;
+}
+
 .universitymenu{
-    border-bottom: 1.5px solid black;
+    color: aliceblue;
+    border-bottom: 1.5px solid aliceblue;
     margin-right: 100px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.coursemenu{
+    color: aliceblue;
+    border-bottom: 1.5px solid aliceblue;
+    margin-right: 100px;
+    margin-bottom: 10px;
     float: left;
 }
 
 .agemenu{
-    border-bottom: 1.5px solid black;
+    color: aliceblue;
+    border-bottom: 1.5px solid aliceblue;
     margin-right: 100px;
+    margin-bottom: 10px;
     float: left;
 }
 
 .mangamenu{
-    border-bottom: 1.5px solid black;
+    color: aliceblue;
+    border-bottom: 1.5px solid aliceblue;
     margin-right: 100px;
+    margin-bottom: 10px;
     float: left;
 }
 
 .instagrammenu{
-    border-bottom: 1.5px solid black;
+    color: aliceblue;
+    border-bottom: 1.5px solid aliceblue;
     margin-right: 100px;
+    margin-bottom: 10px;
     float: left;
 }
 
 .factor{
     padding-top: 20px;
     padding-bottom: 5px;
+    display: block;
+}
+
+.favorite{
+    padding-top: 100px;
+    color: rgb(15, 185, 228);
+    margin-bottom: 10px;
+    text-align: center;  /* 中央寄せの指定 */
+}
+
+#scene{
+    padding-top: 30px;
+    display: block;
+    margin: auto;  /*画像の中央寄せ*/
+    margin-bottom: 50px;
+    height: 300px;
+    width: 400px;
 }
