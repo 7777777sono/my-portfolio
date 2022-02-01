@@ -1,10 +1,12 @@
 .non-footer{
     background-image: url("./image/evening-g600d7b0b6_1920.jpg");
-    background-size: 100%;
+    background-size: cover; /* 背景画像の縦横比を保持したまま、ブラウザにピッタリ表示 */
 }
 
 ul{
     display: flex; /* 中の要素を横並びにする */
+    height: 100%;
+    width: 100%;
 }
 
 li{
@@ -13,7 +15,7 @@ li{
 }
 
 .header{
-    height:50px;
+    height: 20%;
     background-color: black;
     padding-top: 63px;
     padding-bottom: 63px;
@@ -26,11 +28,6 @@ li{
     display: flex; /* 中の要素を横並びにする */
 }
 
-.main{
-    padding-left: 30px;
-    padding-bottom: 50px;
-}
-
 .name{
     padding-top: 130px;
     padding-left: 20px;
@@ -39,6 +36,7 @@ li{
     /* フェードイン */
     animation-name: fadein;  /* fadeinとアニメーション名を定義 */
     animation-duration: 2s;  /* アニメーションの長さを指定する */
+    height: 100%;
 }
 
 .roman-name{
@@ -49,6 +47,7 @@ li{
     /* フェードイン */
     animation-name: fadein;  /* fadeinとアニメーション名を定義 */
     animation-duration: 2s;  /* アニメーションの長さを指定する */
+    height: 100%;
 }
 
 @keyframes fadein {
@@ -65,16 +64,22 @@ li{
 .introduction{
     color: aliceblue;
     border-bottom: 1.5px solid aliceblue;
+    margin-left: 20px;
     margin-bottom: 30px;
+    height: 100%;
+    width: 100%;
 }
 
 .top-list{
     overflow: hidden;
+    height: 100%;
 }
 
 .list{
+    margin-left: 20px;
     margin-right: 100px;
     float: left;
+    height: 100%;
 }
 
 a{
@@ -84,47 +89,64 @@ a{
 .universitymenu{
     color: aliceblue;
     border-bottom: 1.5px solid aliceblue;
+    margin-left: 20px;
     margin-right: 100px;
     margin-bottom: 10px;
     float: left;
+    height: 100%;
+    width: 100%;
 }
 
 .coursemenu{
     color: aliceblue;
     border-bottom: 1.5px solid aliceblue;
+    margin-left: 20px;
     margin-right: 100px;
     margin-bottom: 10px;
     float: left;
+    height: 100%;
+    width: 100%;
 }
 
 .agemenu{
     color: aliceblue;
     border-bottom: 1.5px solid aliceblue;
+    margin-left: 20px;
     margin-right: 100px;
     margin-bottom: 10px;
     float: left;
+    height: 100%;
+    width: 100%;
 }
 
 .mangamenu{
     color: aliceblue;
     border-bottom: 1.5px solid aliceblue;
+    margin-left: 20px;
     margin-right: 100px;
     margin-bottom: 10px;
     float: left;
+    height: 100%;
+    width: 100%;
 }
 
 .instagrammenu{
     color: aliceblue;
     border-bottom: 1.5px solid aliceblue;
+    margin-left: 20px;
     margin-right: 100px;
     margin-bottom: 10px;
     float: left;
+    height: 100%;
+    width: 100%;
 }
 
 .factor{
-    padding-top: 20px;
+    margin-left: 20px;
     padding-bottom: 5px;
     display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .favorite{
@@ -132,6 +154,7 @@ a{
     color: rgb(15, 185, 228);
     margin-bottom: 10px;
     text-align: center;  /* 中央寄せの指定 */
+    height: 100%;
 }
 
 #scene{
@@ -145,6 +168,8 @@ a{
 
 .divination{
     text-align: center;  /* 中央寄せの指定 */
+    height: 100%;
+    width: 100%;
 }
 
 .divination-title{
