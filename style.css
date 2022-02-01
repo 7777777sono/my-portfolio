@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth; /* ページ全体のページ内リンクがスムーズスクロール化 */
+}
+
 .non-footer{
     background-image: url("./image/evening-g600d7b0b6_1920.jpg");
     background-size: cover; /* 背景画像の縦横比を保持したまま、ブラウザにピッタリ表示 */
