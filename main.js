@@ -16,6 +16,7 @@ const scene=["https://livedoor.blogimg.jp/anigei-mangabox/imgs/4/d/4dd6bd91-s.jp
     "https://newsinfomation.net/wp-content/uploads/2021/07/8-11.jpg",
     "https://blogimg.goo.ne.jp/user_image/6d/da/4375040fc5a40054eb69fea787ed1359.jpg?1597877727",
     "https://renote.jp/files/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOXRxRXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bd0eac625e4c105ef2b94d1c232923b239f9a587/186%5B2138%5D.jpg",
+    "https://s3-ap-northeast-1.amazonaws.com/cdn.bibi-star.jp/production/imgs/images/000/532/880/original.png?1595133850",
     "https://ritaremake-jinseikakerubokuwa.com/wp-content/uploads/2020/03/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3796-768x576.png",
     "https://manga-netabare-kanso.com/wp-content/uploads/2018/04/%E3%83%8F%E3%82%A4%E3%82%AD%E3%83%A5%E3%83%BC298%E8%A9%B1%E6%9C%88%E5%B3%B6%EF%BC%88%E3%83%84%E3%83%83%E3%82%AD%E3%83%BC%EF%BC%89.png",
     "https://s3-ap-northeast-1.amazonaws.com/cdn.bibi-star.jp/production/imgs/images/000/631/121/original.?1618474647",
@@ -290,8 +291,6 @@ prevButton.onclick=function(){
     favoriteScene.removeChild(sceneId)
     favoriteScenePage.textContent=pageNum+"/"+scene.length
     favoriteScene.append(imgFactor)
-    console.log(pageNum)
-    console.log("i="+i)
     //ボタンを押してから5secondで画像が切り替わるようにする
     count=0
 }
@@ -314,8 +313,6 @@ nextButton.onclick=function(){
     favoriteScene.removeChild(sceneId)
     favoriteScenePage.textContent=pageNum+"/"+scene.length
     favoriteScene.append(imgFactor)
-    console.log(pageNum)
-    console.log("i="+i)
     //ボタンを押してから5secondで画像が切り替わるようにする
     count=0
 }
@@ -352,23 +349,24 @@ const imgChange=function(){
     // count を秒単位にして表示
     second = count / 100
     if(second%5===0 && i!=scene.length){
-        imgFactor.src=scene[i]
-        imgFactor.id="scene"
-        favoriteScene.removeChild(sceneId)
         if(pageNum<=scene.length){
             pageNum++
         }
         else{
             pageNum=1
         }
-        i++
-        favoriteScenePage.textContent=pageNum+"/"+scene.length
-        favoriteScene.append(imgFactor)
-        console.log(pageNum)
-        console.log("i="+i)
+        if(i+1!=pageNum){
+            i++
+        }
         if(i===scene.length){
             i=0
+            pageNum=1
         }
+        imgFactor.src=scene[i]
+        imgFactor.id="scene"
+        favoriteScene.removeChild(sceneId)
+        favoriteScenePage.textContent=pageNum+"/"+scene.length
+        favoriteScene.append(imgFactor)
     }
 }
 
